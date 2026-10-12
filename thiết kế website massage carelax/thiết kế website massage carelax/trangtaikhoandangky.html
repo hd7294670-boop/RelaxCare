@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RelaxCare - Thiết Bị Massage & Chăm Sóc Sức Khỏe Tại Nhà</title>
+    <!-- LIÊN KẾT ĐỒNG BỘ VỚI INDEX.CSS DÙNG CHUNG -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+      <link rel="icon" type="image/png" href="b223c319-9565-4deb-a6e3-780d776867d7-Photoroom.png">
+</head>
+
+    <style>
+
+        /* =========================================
+           TRANG ĐĂNG KÝ TÀI KHOẢN
+        ========================================= */
+
+        .register-page {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 50px 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f4f8f2,
+                    #ffffff
+                );
+        }
+
+
+        /* Khung đăng ký */
+
+        .register-container {
+            width: 100%;
+            max-width: 480px;
+
+            background: #ffffff;
+
+            padding: 35px 40px;
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, 0.10);
+
+            border: 1px solid #e5e7eb;
+        }
+
+
+        /* Logo */
+
+        .register-logo {
+            text-align: center;
+
+            margin-bottom: 10px;
+
+            color: #1b4332;
+
+            font-size: 26px;
+
+            font-weight: 700;
+        }
+
+
+        .register-logo span {
+            margin-right: 5px;
+        }
+
+
+        /* Tiêu đề */
+
+        .register-title {
+            text-align: center;
+
+            color: #1b4332;
+
+            font-size: 25px;
+
+            margin: 5px 0 8px;
+        }
+
+
+        .register-subtitle {
+            text-align: center;
+
+            color: #7a7a7a;
+
+            font-size: 14px;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* Form */
+
+        .register-form-group {
+            margin-bottom: 17px;
+        }
+
+
+        .register-form-group label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            color: #333;
+        }
+
+
+        .register-form-group input {
+            width: 100%;
+
+            height: 46px;
+
+            padding: 0 13px;
+
+            border: 1px solid #dcdcdc;
+
+            border-radius: 8px;
+
+            outline: none;
+
+            font-size: 14px;
+
+            transition: 0.25s;
+        }
+
+
+        .register-form-group input:focus {
+            border-color: #2f6b3a;
+
+            box-shadow:
+                0 0 0 3px rgba(47, 107, 58, 0.10);
+        }
+
+
+        /* Điều khoản */
+
+        .register-terms {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 8px;
+
+            margin: 5px 0 20px;
+
+            font-size: 13px;
+
+            color: #666;
+
+            line-height: 1.5;
+        }
+
+
+        .register-terms input {
+            margin-top: 3px;
+        }
+
+
+        .register-terms a {
+            color: #2f6b3a;
+
+            text-decoration: none;
+
+            font-weight: 600;
+        }
+
+
+        /* Nút đăng ký */
+
+        .register-button {
+            width: 100%;
+
+            height: 48px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #2f6b3a;
+
+            color: #ffffff;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.25s;
+        }
+
+
+        .register-button:hover {
+            background: #24552e;
+
+            transform: translateY(-1px);
+        }
+
+
+        /* Hoặc */
+
+        .register-divider {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin: 24px 0 18px;
+
+            color: #999;
+
+            font-size: 13px;
+        }
+
+
+        .register-divider::before,
+        .register-divider::after {
+            content: "";
+
+            flex: 1;
+
+            height: 1px;
+
+            background: #e5e5e5;
+        }
+
+
+        /* Google / Facebook */
+
+        .social-register {
+            display: flex;
+
+            gap: 10px;
+        }
+
+
+        .social-register button {
+            flex: 1;
+
+            height: 43px;
+
+            border-radius: 7px;
+
+            cursor: pointer;
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            transition: 0.2s;
+        }
+
+
+        .google-register {
+            background: #ffffff;
+
+            border: 1px solid #dcdcdc;
+
+            color: #333;
+        }
+
+
+        .google-register:hover {
+            background: #f7f7f7;
+        }
+
+
+        .facebook-register {
+            background: #1877f2;
+
+            border: 1px solid #1877f2;
+
+            color: #ffffff;
+        }
+
+
+        .facebook-register:hover {
+            background: #1264d6;
+        }
+
+
+        /* Đã có tài khoản */
+
+        .login-link {
+            text-align: center;
+
+            margin-top: 24px;
+
+            font-size: 14px;
+
+            color: #666;
+        }
+
+
+        .login-link a {
+            color: #2f6b3a;
+
+            font-weight: 600;
+
+            text-decoration: none;
+        }
+
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* Responsive */
+
+        @media (max-width: 600px) {
+
+            .register-page {
+                padding: 25px 15px;
+            }
+
+            .register-container {
+                padding: 28px 22px;
+            }
+
+            .register-title {
+                font-size: 22px;
+            }
+
+            .social-register {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         TRANG ĐĂNG KÝ
+    ========================================== -->
+
+    <main class="register-page">
+
+        <div class="register-container">
+
+
+            <!-- Logo -->
+
+            <a href="index.html" class="logo" aria-label="RelaxCare - Trang chủ">
+    <img
+        src="b223c319-9565-4deb-a6e3-780d776867d7-Photoroom.png"
+        alt="RelaxCare - Healthy & Wellness"
+        class="logo-image"
+    >
+</a>
+
+
+            <!-- Tiêu đề -->
+
+            <h1 class="register-title">
+                Tạo tài khoản
+            </h1>
+
+
+            <p class="register-subtitle">
+                Đăng ký tài khoản để mua sắm và nhận nhiều ưu đãi từ RelaxCare
+            </p>
+
+
+            <!-- FORM ĐĂNG KÝ -->
+
+            <form id="registerForm">
+
+
+                <!-- Họ tên -->
+
+                <div class="register-form-group">
+
+                    <label for="fullname">
+                        Họ và tên *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        placeholder="Nhập họ và tên"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Số điện thoại -->
+
+                <div class="register-form-group">
+
+                    <label for="phone">
+                        Số điện thoại *
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Nhập số điện thoại"
+                        pattern="[0-9]{10,11}"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="register-form-group">
+
+                    <label for="email">
+                        Email *
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@gmail.com"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Mật khẩu -->
+
+                <div class="register-form-group">
+
+                    <label for="password">
+                        Mật khẩu *
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Nhập mật khẩu"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Nhập lại mật khẩu -->
+
+                <div class="register-form-group">
+
+                    <label for="confirmPassword">
+                        Nhập lại mật khẩu *
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="Nhập lại mật khẩu"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Điều khoản -->
+
+                <label class="register-terms">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        required
+                    >
+
+                    <span>
+                        Tôi đồng ý với
+                        <a href="#">
+                            Điều khoản sử dụng
+                        </a>
+                        và
+                        <a href="#">
+                            Chính sách bảo mật
+                        </a>
+                        của RelaxCare.
+                    </span>
+
+                </label>
+
+
+                <!-- Nút đăng ký -->
+
+                <button
+                    type="submit"
+                    class="register-button"
+                >
+                    Đăng ký tài khoản
+                </button>
+
+
+            </form>
+
+
+            <!-- Đăng ký bằng mạng xã hội -->
+
+            <div class="register-divider">
+                Hoặc đăng ký bằng
+            </div>
+
+
+            <div class="social-register">
+
+                <button
+                    type="button"
+                    class="google-register"
+                    onclick="alert('Chức năng đăng ký Google sẽ được kết nối sau!')"
+                >
+                    Google
+                </button>
+
+
+                <button
+                    type="button"
+                    class="facebook-register"
+                    onclick="alert('Chức năng đăng ký Facebook sẽ được kết nối sau!')"
+                >
+                    Facebook
+                </button>
+
+            </div>
+
+
+            <!-- Đã có tài khoản -->
+
+            <div class="login-link">
+
+                Bạn đã có tài khoản?
+
+                <a href="trangtaikhoandangnhap.html">
+                    Đăng nhập ngay
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================================
+         JAVASCRIPT ĐĂNG KÝ
+    ========================================== -->
+
+    <script>
+
+        document
+            .getElementById("registerForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+
+                const fullname =
+                    document.getElementById("fullname").value.trim();
+
+                const phone =
+                    document.getElementById("phone").value.trim();
+
+                const email =
+                    document.getElementById("email").value.trim();
+
+                const password =
+                    document.getElementById("password").value;
+
+                const confirmPassword =
+                    document.getElementById("confirmPassword").value;
+
+
+                /* Kiểm tra mật khẩu */
+
+                if (password !== confirmPassword) {
+
+                    alert(
+                        "Mật khẩu nhập lại không trùng khớp!"
+                    );
+
+                    document
+                        .getElementById("confirmPassword")
+                        .focus();
+
+                    return;
+                }
+
+
+                /* Đăng ký thành công */
+
+                alert(
+                    "Đăng ký tài khoản thành công!\n\n" +
+                    "Chào mừng " + fullname +
+                    " đến với RelaxCare."
+                );
+
+
+                /* Chuyển sang trang đăng nhập */
+
+                window.location.href =
+                    "trangtaikhoandangnhap.html";
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>
